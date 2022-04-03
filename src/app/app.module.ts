@@ -14,10 +14,20 @@ import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
+import { PasswordResetComponent } from './components/password-reset/password-reset.component';
+import { SignOutComponent } from './components/sign-out/sign-out.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignInComponent,
+    SignUpComponent,
+    EmailVerificationComponent,
+    PasswordResetComponent,
+    SignOutComponent
   ],
   imports: [
     BrowserModule,
