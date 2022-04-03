@@ -1,1 +1,29 @@
-<p>sign-in works!</p>
+<mat-card class="u-mt-3">
+    <mat-card-title>Olá, seja bem-vindo!</mat-card-title>
+    <mat-card-content>
+        <form>
+
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email">
+                <button>
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Senha</mat-label>
+                <input matInput type="password" formControlName="password">
+                <button>
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <a href="#">Esqueceu a senha?</a>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary">Entrar</button>
+        <button mat-button [routerLink]="['/register']">Cadastre-se</button>
+    </mat-card-actions>
+</mat-card>

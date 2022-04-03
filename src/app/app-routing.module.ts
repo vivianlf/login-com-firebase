@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CalculadoraRoutes } from './calculadora/calculadora-routing.module';
+import { EmailVerififRoutes } from './components/email-verification/email-verification-routing.module';
+import { PasswordResetRoutes } from './components/password-reset/password-reset-routing.module';
+import { SignInRoutes } from './components/sign-in/sign-in-routing.module';
+import { SignOutRoutes } from './components/sign-out/sign-out-routing.module';
+import { SignUpRoutes } from './components/sign-up/sign-up-routing.module';
 import { ConversorRoutes } from './conversor/conversor-routing.module';
 import { DashboardRoutes } from './dashboard/dashboard-routing.module';
 import { JogoDaVelhaRoutes } from './jogo-da-velha/jogo-da-velha-routing.module';
@@ -18,7 +23,12 @@ export const routes: Routes = [
 	...CalculadoraRoutes,
 	...ConversorRoutes,
 	...TarefaRoutes,
-	...JogoDaVelhaRoutes
+	...JogoDaVelhaRoutes,
+	...SignInRoutes,
+	...SignOutRoutes,
+	...SignUpRoutes,
+	...PasswordResetRoutes,
+	...EmailVerififRoutes
 	
 	
 ];
