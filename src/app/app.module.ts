@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { CalculadoraModule } from './calculadora/calculadora.module';
 import { ConversorModule } from './conversor/conversor.module';
@@ -19,6 +18,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
 import { PasswordResetComponent } from './components/password-reset/password-reset.component';
 import { SignOutComponent } from './components/sign-out/sign-out.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,8 @@ import { SignOutComponent } from './components/sign-out/sign-out.component';
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    BrowserAnimationsModule
  
   ],
   providers: [
