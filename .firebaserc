@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "capacitacaofirebase-4ba27": {
+      "hosting": {
+        "projeto-final": [
+          "capacitacaofirebase-4ba27"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "capacitacaofirebase-4ba27"
+  }
+}
