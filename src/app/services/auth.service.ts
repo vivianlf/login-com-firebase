@@ -11,6 +11,7 @@ import { User } from '../models/user';
 })
 export class AuthService {
 
+
   constructor(
     private afAuth: AngularFireAuth, 
     private firestore : AngularFirestore, 
@@ -41,6 +42,7 @@ signIn (email: string, password: string){
       });
     }
     this.router.navigate(['dashboard']);
+    
   })
   .catch((error) => {
     console.log(error);
@@ -101,6 +103,15 @@ async signOut(){
     console.log(error);
   }
 }
+
+get isLoggedIn (): boolean {
+  let currentUser = localStorage.getItem('user');
+  if(currentUser !== null && currentUser !== '{}'){
+    return true;
+  }
+  return false; 
+}
+
 
 }
 

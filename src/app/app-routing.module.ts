@@ -14,7 +14,7 @@ import { TarefaRoutes } from './tarefas/tarefas-routing.module';
 export const routes: Routes = [
 	{ 
 		path: '', 
-		redirectTo: '/dashboard', 
+		redirectTo: '/sign-in', 
 		pathMatch: 'full' 
 	},
 	

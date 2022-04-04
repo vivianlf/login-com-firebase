@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from './models/user';
 import { AuthService } from './services/auth.service';
 
 @Component({
@@ -9,6 +10,9 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'Projeto Final';
+  
+ user: User;
+
 
   constructor(private AuthService: AuthService, private router : Router) { }
 
@@ -16,4 +20,13 @@ export class AppComponent {
     $event.preventDefault();
     this.AuthService.signOut();
   }
+
+  mostrarNav (): boolean {
+    let currentUser = localStorage.getItem('user');
+    if(currentUser !== null && currentUser !== '{}'){
+      return true;
+    }
+    return false; 
+  }
+  
 }
