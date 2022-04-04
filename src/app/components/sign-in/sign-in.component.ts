@@ -17,9 +17,7 @@ export class SignInComponent implements OnInit {
 
 
   signIn (user: User, password: string){
-    console.log(user);
-
-    console.log(password);
+    this.AuthService.signIn(user.email, password);
   }
 
   signUp (){

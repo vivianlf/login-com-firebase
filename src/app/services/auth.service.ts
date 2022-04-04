@@ -29,6 +29,31 @@ signUp (user: User, password: string){
   });
   }
 
+signIn (email: string, password: string){
+  return this.afAuth
+  .signInWithEmailAndPassword(email, password)
+  .then((result) => {
+    if (result.user){
+      this.getUserData(result.user?.uid).then((users) => {
+        users.forEach((user) => {
+          localStorage.setItem('user', JSON.stringify(user.data()));
+        });
+      });
+    }
+    this.router.navigate(['dashboard']);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
+
+async getUserData (uid: string){
+  const docRef = this.firestore.collection('users').ref;
+
+  return await docRef.where('uid', '==', uid).get(); 
+
+}
+
 SetUserData (loginResponse: any, user: User){
   const userRef: AngularFirestoreDocument<any> = this.firestore.doc(
     'users/${loginResponse.uid}'
