@@ -71,5 +71,27 @@ SetUserData (loginResponse: any, user: User){
 
 }
 
+PasswordReset(email: string){
+  return this.afAuth
+  .sendPasswordResetEmail(email)
+  .then(()=> {
+    window.alert('Um email foi enviado para recuperar sua senha! Verifique sua caixa da entrada ');
+  })
+  .catch((error: any) => {
+    window.alert('Preencha o campo de e-mail');
+  });
+}
+
+async signOut(){
+  try{
+    await this.afAuth.signOut();
+    localStorage.removeItem('user');
+    this.router.navigate(['sign-in']);
+
+  } catch(error) {
+    console.log(error);
+  }
+}
+
 }
 

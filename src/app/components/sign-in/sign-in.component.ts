@@ -23,4 +23,9 @@ export class SignInComponent implements OnInit {
   signUp (){
     this.router.navigate(['sign-up']);
   }
+
+  passwordReset(user: User){
+    this.AuthService.PasswordReset(user.email);
+    
+  }
 }

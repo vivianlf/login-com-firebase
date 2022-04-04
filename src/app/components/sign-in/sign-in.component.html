@@ -16,7 +16,7 @@
                 
             </mat-form-field>
 
-            <a [routerLink]="['/password-reset']">Esqueceu a senha?</a>
+            <a (click)="passwordReset(data.value)">Esqueceu a senha?</a>
             <mat-card-actions>
                 <button mat-raised-button color="accent" type="submit">Entrar</button>
                 <button mat-button (click)="signUp()">Cadastre-se</button>
