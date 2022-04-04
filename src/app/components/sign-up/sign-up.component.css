@@ -1,0 +1,28 @@
+mat-form-field {
+    display: block;
+  }
+  
+  .u-h-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .u-mt-3 {
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+  
+  .u-mw-500 {
+    max-width: 500px;
+  }
+
+  .content {
+    height: 100vh;
+    margin: 0px;
+    
+  }

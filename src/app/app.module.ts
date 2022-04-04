@@ -9,10 +9,7 @@ import { JogoDaVelhaModule } from './jogo-da-velha/jogo-da-velha.module';
 import { TarefasModule } from './tarefas/tarefas.module';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
@@ -24,6 +21,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
 
 
 @NgModule({
@@ -43,17 +42,14 @@ import { MatInputModule } from '@angular/material/input';
     TarefasModule,
     JogoDaVelhaModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAnalytics(() => getAnalytics()),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
 
   ],
   providers: [

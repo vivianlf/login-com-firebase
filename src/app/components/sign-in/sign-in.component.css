@@ -8,10 +8,21 @@ mat-form-field {
   }
   
   .u-mt-3 {
-    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    margin-top: 50px;
   }
   
   .u-mw-500 {
     max-width: 500px;
   }
-  
+
+  .content {
+    height: 100vh;
+    margin: 0px;
+    
+  }
