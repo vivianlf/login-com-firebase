@@ -13,8 +13,6 @@ import { ScreenTrackingService,UserTrackingService } from '@angular/fire/analyti
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
-import { PasswordResetComponent } from './components/password-reset/password-reset.component';
-import { SignOutComponent } from './components/sign-out/sign-out.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -31,8 +29,6 @@ import { AngularFireModule } from '@angular/fire/compat';
     SignInComponent,
     SignUpComponent,
     EmailVerificationComponent,
-    PasswordResetComponent,
-    SignOutComponent
   ],
   imports: [
     BrowserModule,

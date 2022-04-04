@@ -27,8 +27,9 @@
               <li><a [routerLink]="['./jogo-da-velha']">Jogo da velha</a></li>
             </ul>
           </li>
-          <li style="float: right;"><a href="#" (click)="signOut($event)"></a>Sair</li>
         </ul>
+        <ul class="nav navbar-nav" style="float:right;"><li style="float: right;"><a (click)="signOut($event)">Sair</a></li></ul>
+        <ul class="nav navbar-nav" style="float:right;"><li style="float: right;"><a [routerLink]="['./jogo-da-velha']">Minha conta</a></li></ul>
       </div>
     </div>
   </nav>
