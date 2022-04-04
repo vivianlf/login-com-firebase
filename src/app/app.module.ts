@@ -21,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
+import { MinhaContaComponent } from './components/minha-conta/minha-conta.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     SignInComponent,
     SignUpComponent,
     EmailVerificationComponent,
+    MinhaContaComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CalculadoraRoutes } from './calculadora/calculadora-routing.module';
 import { EmailVerififRoutes } from './components/email-verification/email-verification-routing.module';
+import { MinhaContaRoutes } from './components/minha-conta/minha-conta-routing.module';
 import { SignInRoutes } from './components/sign-in/sign-in-routing.module';
 import { SignUpRoutes } from './components/sign-up/sign-up-routing.module';
 import { ConversorRoutes } from './conversor/conversor-routing.module';
@@ -24,7 +25,8 @@ export const routes: Routes = [
 	...JogoDaVelhaRoutes,
 	...SignInRoutes,
 	...SignUpRoutes,
-	...EmailVerififRoutes
+	...EmailVerififRoutes,
+	...MinhaContaRoutes
 	
 	
 ];

@@ -1,0 +1,13 @@
+<div>
+
+    <h1>Olá, {{ user.name }} </h1>
+    <br>
+    <p>Esses são os dados da sua conta:</p>
+    <h5>Email: {{ user.email }}</h5>
+    <br>
+    <h5>ID: {{ user.uid }}</h5>
+    <br>
+    <a (click)="signOut($event)">Deseja sair?</a>
+
+
+</div>

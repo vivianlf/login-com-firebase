@@ -1,6 +1,8 @@
 <div style="margin: 150px;">
 
-<p style="font-size: 16px;">Um email de confirmação foi enviado para ativar sua conta! Verifique sua caixa da entrada</p>
-<button mat-raised-button color="accent" (click)="emailVerification()">Confirmar e-mail</button>
+<p style="font-size: 16px;">Para ativar sua conta você precisa verificar seu endereço de email. Gostaria de verificar agora?</p>
+<button mat-raised-button color="accent" (click)="emailVerification()">verificar e-mail</button>
+<button mat-button [routerLink]="['/sign-in']" >Já confirmei, desejo fazer login</button>
+
 
 </div>
