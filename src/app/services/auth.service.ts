@@ -82,6 +82,15 @@ PasswordReset(email: string){
   });
 }
 
+async emailVerification(){
+  return await this.afAuth.currentUser
+  .then((uid)=> uid?.sendEmailVerification())
+  .then(() => {
+  this.router.navigate (['email-verification'])  
+  });
+  
+}
+
 async signOut(){
   try{
     await this.afAuth.signOut();
